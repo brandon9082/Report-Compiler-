@@ -37,12 +37,28 @@ run the streamlit app from terminal through the command: streamlit run streamlit
 
 -Drag-and-drop a different .md file to switch the report being viewed.
 
-#### 5. Ad Hoc Customizations: 
+#### Ad Hoc Customizations: 
 
 ->Change the report structure array in the generate_outlook.py/MockLLM_generator.py file to change the prompt accordingly.
 ->Change the LLM model used in the generate_outlook.py file here: 
 Settings.llm = Ollama(model="  ", request_timeou=t=60.0)
 
-<pre> ```text real_estate_outlook/ │ ├── data/ # Indexed vectors saved as nodes.pkl ├── sources/ # Folder with input PDF files ├── html_sources.txt # List of HTML source URLs ├── output/ # Generated reports (.md, .pdf, .docx) │ ├── docling_indexer.py # Embeds PDFs and HTML into vector format ├── generate_outlook.py # Generates report using vector DB and LLM ├── MockLLM_generator.py # Fallback version without LLM ├── app_streamlit.py # Streamlit UI for report viewing/export ├── requirements.txt # Python dependencies └── README.md # This file ``` </pre>
+### Structure
+
+```text
+real_estate_outlook/
+│
+├── data/                     # Indexed vectors saved as nodes.pkl
+├── sources/                  # Folder with input PDF files
+├── html_sources.txt          # List of HTML source URLs
+├── output/                   # Generated reports (.md, .pdf, .docx)
+│
+├── docling_indexer.py        # Embeds PDFs and HTML into vector format
+├── generate_outlook.py       # Generates report using vector DB and LLM
+├── MockLLM_generator.py      # Fallback version without LLM
+├── app_streamlit.py          # Streamlit UI for report viewing/export
+├── requirements.txt          # Python dependencies
+└── README.md                 # This file
+```
 
 
