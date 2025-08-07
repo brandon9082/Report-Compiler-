@@ -14,13 +14,13 @@ This project creates a fully offline, AI-powered pipeline that:
 
 ## 🧭 Instructions
 
-### 1. Add Your Sources
+### 1. Add Your Sources and Index
 - Add webpage URLs to `html_sources.txt` (one per line)
 - Place local PDFs in the `sources/` folder
 
-### 2. Run the Indexer
-```bash
-python docling_indexer.py
+### 2.Index
+
+-Run the docling_indexer.py file to generate vector embeddings, these will be stored in the "data" folder as text nodes
 
 ### 3. Generate Outlook Report
 -The report will be saved in the output/ folder as a .md (Markdown) file.
@@ -37,11 +37,13 @@ run the streamlit app from terminal through the command: streamlit run streamlit
 
 -Drag-and-drop a different .md file to switch the report being viewed.
 
-Ad Hoc Customizations: 
+#### 5. Ad Hoc Customizations: 
 
 ->Change the report structure array in the generate_outlook.py/MockLLM_generator.py file to change the prompt accordingly.
 ->Change the LLM model used in the generate_outlook.py file here: 
 Settings.llm = Ollama(model="  ", request_timeou=t=60.0)
+
+### 6. File Structure
 
 
 real_estate_outlook/
