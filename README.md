@@ -43,7 +43,19 @@ run the streamlit app from terminal through the command: streamlit run streamlit
 ->Change the LLM model used in the generate_outlook.py file here: 
 Settings.llm = Ollama(model="  ", request_timeou=t=60.0)
 
-<pre lang="text"> ```text real_estate_outlook/ │ ├── data/ # Indexed vectors saved as nodes.pkl ├── sources/ # Folder with input PDF files ├── html_sources.txt # Plaintext file of webpage URLs ├── output/ # Final reports (.md, .pdf, .docx) │ ├── docling_indexer.py # Preprocessing and embedding of PDFs + HTML ├── generate_outlook.py # Structured markdown report generation ├── MockLLM_generator.py # Version without LLM (mock response) ├── app_streamlit.py # Streamlit viewer and export tool ├── requirements.txt # Python dependencies └── README.md # This file ``` </pre>
+real_estate_outlook/
+│
+├── data/                     # Indexed vectors (nodes.pkl)
+├── sources/                  # Input PDF files
+├── html_sources.txt          # List of HTML source URLs
+├── output/                   # Generated reports (.md, .pdf, .docx)
+│
+├── docling_indexer.py        # Embeds PDFs and HTML into vector format
+├── generate_outlook.py       # Generates report using vector DB and LLM
+├── MockLLM_generator.py      # Fallback version without LLM
+├── streamlit_app.py          # Streamlit UI for report viewing/export
+├── requirements.txt          # Python dependencies
+└── README.md                 # This file
 
 
 
