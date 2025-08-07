@@ -43,6 +43,8 @@ run the streamlit app from terminal through the command: streamlit run streamlit
 ->Change the LLM model used in the generate_outlook.py file here: 
 Settings.llm = Ollama(model="  ", request_timeou=t=60.0)
 
+##
+
 real_estate_outlook/
 │
 ├── data/                     # Indexed vectors (nodes.pkl)
